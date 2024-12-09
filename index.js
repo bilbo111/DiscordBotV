@@ -1,5 +1,6 @@
 const fs = require("node:fs");
 const path = require("node:path");
+const { token } = require('./config.json');
 const {
   Client,
   Collection,
@@ -90,4 +91,4 @@ client.on(Events.InteractionCreate, async (interaction) => {
   }
 });
 
-client.login(process.env.token);
+client.login(token);
